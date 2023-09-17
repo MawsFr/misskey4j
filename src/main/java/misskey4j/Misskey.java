@@ -1,6 +1,7 @@
 package misskey4j;
 
 import misskey4j.api.AccountsResource;
+import misskey4j.api.AnnouncementsResource;
 import misskey4j.api.ApResource;
 import misskey4j.api.AppResource;
 import misskey4j.api.AuthResource;
@@ -65,6 +66,8 @@ public interface Misskey {
     HashtagsResource hashtags();
 
     OtherResource other();
+
+    AnnouncementsResource announcements();
 
     /**
      * Get host to access.
