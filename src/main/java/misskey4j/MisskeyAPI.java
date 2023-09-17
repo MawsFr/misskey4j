@@ -200,6 +200,12 @@ public enum MisskeyAPI {
     UnlikeGalleryPost("gallery/posts/unlike"),
 
     // ------------------------------------------ //
+    // Announcements
+    // ------------------------------------------ //
+    Announcements("announcements"),
+    IReadAnnouncement("i/read-announcement"),
+
+    // ------------------------------------------ //
     // Other
     // ------------------------------------------ //
 
