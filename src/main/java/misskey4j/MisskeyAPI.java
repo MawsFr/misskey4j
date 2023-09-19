@@ -53,6 +53,7 @@ public enum MisskeyAPI {
     UsersRelation("users/relation"),
     UsersSearch("users/search"),
     UsersSearchByUsernameAndHost("users/search-by-username-and-host"),
+    ReportUserAbuse("users/report-abuse"),
 
     // ------------------------------------------ //
     // I

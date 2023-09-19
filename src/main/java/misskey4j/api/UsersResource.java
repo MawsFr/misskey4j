@@ -1,5 +1,6 @@
 package misskey4j.api;
 
+import misskey4j.api.request.users.UserReportAbuseRequest;
 import misskey4j.api.request.users.UsersFollowersRequest;
 import misskey4j.api.request.users.UsersFollowingsRequest;
 import misskey4j.api.request.users.UsersReactionsRequest;
@@ -83,5 +84,11 @@ public interface UsersResource {
      */
     Response<UsersSearchByUsernameAndHostResponse[]> searchByUsernameAndHost(
             UsersSearchByUsernameAndHostRequest request);
+
+    /**
+     * Report abuse
+     * https://misskey.io/api-doc#operation/users/report-abuse
+     */
+    Response<Void> reportAbuse(UserReportAbuseRequest request);
 
 }

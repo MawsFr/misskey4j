@@ -2,6 +2,7 @@ package misskey4j.internal.api;
 
 import misskey4j.MisskeyAPI;
 import misskey4j.api.UsersResource;
+import misskey4j.api.request.users.UserReportAbuseRequest;
 import misskey4j.api.request.users.UsersFollowersRequest;
 import misskey4j.api.request.users.UsersFollowingsRequest;
 import misskey4j.api.request.users.UsersReactionsRequest;
@@ -115,5 +116,13 @@ public class UsersResourceImpl extends AbstractResourceImpl implements UsersReso
             UsersSearchByUsernameAndHostRequest request) {
         return post(UsersSearchByUsernameAndHostResponse[].class,
                 MisskeyAPI.UsersSearchByUsernameAndHost.code(), request);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Response<Void> reportAbuse(final UserReportAbuseRequest request) {
+        return post(MisskeyAPI.ReportUserAbuse.code(), request);
     }
 }
