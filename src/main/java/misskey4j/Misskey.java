@@ -21,6 +21,7 @@ import misskey4j.api.NotesResource;
 import misskey4j.api.OtherResource;
 import misskey4j.api.PollsResource;
 import misskey4j.api.ReactionsResource;
+import misskey4j.api.UsernameResource;
 import misskey4j.api.UsersResource;
 import misskey4j.api.WebhooksResource;
 import misskey4j.stream.MisskeyStream;
@@ -68,6 +69,8 @@ public interface Misskey {
     OtherResource other();
 
     AnnouncementsResource announcements();
+
+    UsernameResource username();
 
     /**
      * Get host to access.

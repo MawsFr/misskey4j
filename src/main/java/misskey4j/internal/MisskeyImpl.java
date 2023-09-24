@@ -24,6 +24,7 @@ import misskey4j.api.NotesResource;
 import misskey4j.api.OtherResource;
 import misskey4j.api.PollsResource;
 import misskey4j.api.ReactionsResource;
+import misskey4j.api.UsernameResource;
 import misskey4j.api.UsersResource;
 import misskey4j.api.WebhooksResource;
 import misskey4j.internal.api.AccountsResourceImpl;
@@ -47,6 +48,7 @@ import misskey4j.internal.api.NotesResourceImpl;
 import misskey4j.internal.api.OtherResourceImpl;
 import misskey4j.internal.api.PollsResourceImpl;
 import misskey4j.internal.api.ReactionsResourceImpl;
+import misskey4j.internal.api.UsernameResourceImpl;
 import misskey4j.internal.api.UsersResourceImpl;
 import misskey4j.internal.api.WebhooksResourceImpl;
 import misskey4j.stream.MisskeyStream;
@@ -75,6 +77,7 @@ public class MisskeyImpl implements Misskey {
     private final WebhooksResource webhooks;
     private final GalleriesResource galleries;
     private final AnnouncementsResource announcements;
+    private final UsernameResource username;
     private final OtherResource other;
 
     private final String url;
@@ -109,6 +112,7 @@ public class MisskeyImpl implements Misskey {
         webhooks = new WebhooksResourceImpl(url, i);
         galleries = new GalleriesResourceImpl(url, i);
         announcements = new AnnouncementsResourceImpl(url, i);
+        username = new UsernameResourceImpl(url, i);
         other = new OtherResourceImpl(url, i);
     }
 
@@ -225,6 +229,11 @@ public class MisskeyImpl implements Misskey {
     @Override
     public AnnouncementsResource announcements() {
         return announcements;
+    }
+
+    @Override
+    public UsernameResource username() {
+        return username;
     }
 
 

@@ -54,6 +54,7 @@ public enum MisskeyAPI {
     UsersSearch("users/search"),
     UsersSearchByUsernameAndHost("users/search-by-username-and-host"),
     ReportUserAbuse("users/report-abuse"),
+    UsernameAvailable("username/available"),
 
     // ------------------------------------------ //
     // I
@@ -210,8 +211,7 @@ public enum MisskeyAPI {
     // Other
     // ------------------------------------------ //
 
-    ServiceWorkerRegister("sw/register"),
-    ;
+    ServiceWorkerRegister("sw/register");
 
     private final String code;
 
