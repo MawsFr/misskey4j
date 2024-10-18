@@ -243,7 +243,13 @@ public class MisskeyImpl implements Misskey {
     @Override
     public String getHost() {
         try {
-            return new URL(url).getHost();
+            URL URL = new URL(url);
+            String host = URL.getHost();
+
+            return "localhost".equals(host)
+                    ? host + ":" + URL.getPort()
+                    : host;
+
         } catch (Throwable e) {
             throw new IllegalStateException(e);
         }
